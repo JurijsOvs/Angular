@@ -1,0 +1,19 @@
+<p [ngClass]="{
+    'centered-text': centerBool,
+    underlined: underlineBool,
+    orange: orangeBool
+}">{{ articleFromChild }}</p>
+
+<div class="container">
+    <button type="button" class="btn btn-primary" (click)="centerBool = !centerBool">Center {{centerBool | binary}}</button>
+    <button type="button" class="btn btn-secondary mx-2" (click)="underlineBool = !underlineBool">Underline {{underlineBool | binary}}</button>
+    <button type="button" class="btn btn-tetriary" (click)="orangeBool = !orangeBool">Orange {{orangeBool | binary}}</button>
+</div>
+<div class="container m-5">
+    <div class="row">
+    <button type="button" class="btn btn-tetriary" (click)="generateToken()">Generate Token</button>
+    <div class="col"></div>
+    <p>Token is valid {{helper.token}}</p>
+    <div class="col"></div>
+    </div>
+</div>
